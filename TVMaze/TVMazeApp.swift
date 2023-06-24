@@ -11,8 +11,10 @@ import SwiftUI
 struct TVMazeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .preferredColorScheme(.dark)
+            NavigationView {
+                HomeView()
+            }
+            .preferredColorScheme(.dark)
         }
     }
 }

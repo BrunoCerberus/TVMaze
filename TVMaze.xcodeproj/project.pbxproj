@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		15C8762D2A47852900747BBA /* TVMazeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C8762C2A47852900747BBA /* TVMazeApp.swift */; };
-		15C8762F2A47852900747BBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C8762E2A47852900747BBA /* ContentView.swift */; };
+		15C8762F2A47852900747BBA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C8762E2A47852900747BBA /* HomeView.swift */; };
 		15C876312A47852A00747BBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15C876302A47852A00747BBA /* Assets.xcassets */; };
 		15C876352A47852A00747BBA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15C876342A47852A00747BBA /* Preview Assets.xcassets */; };
 		15C8763D2A47869500747BBA /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 15C8763C2A47869500747BBA /* ComposableArchitecture */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		15C876292A47852900747BBA /* TVMaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVMaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C8762C2A47852900747BBA /* TVMazeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVMazeApp.swift; sourceTree = "<group>"; };
-		15C8762E2A47852900747BBA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		15C8762E2A47852900747BBA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		15C876302A47852A00747BBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15C876322A47852A00747BBA /* TVMaze.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TVMaze.entitlements; sourceTree = "<group>"; };
 		15C876342A47852A00747BBA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -55,10 +55,13 @@
 			isa = PBXGroup;
 			children = (
 				15C8762C2A47852900747BBA /* TVMazeApp.swift */,
-				15C8762E2A47852900747BBA /* ContentView.swift */,
 				15C876302A47852A00747BBA /* Assets.xcassets */,
 				15C876322A47852A00747BBA /* TVMaze.entitlements */,
+				15C876402A4786EF00747BBA /* Details */,
+				15C8763F2A4786E900747BBA /* Series */,
+				15C8763E2A4786DD00747BBA /* Home */,
 				15C876332A47852A00747BBA /* Preview Content */,
+				15C876412A47877600747BBA /* Network */,
 			);
 			path = TVMaze;
 			sourceTree = "<group>";
@@ -69,6 +72,179 @@
 				15C876342A47852A00747BBA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		15C8763E2A4786DD00747BBA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				15C876472A47880800747BBA /* Action */,
+				15C876422A4787E100747BBA /* API */,
+				15C876462A47880300747BBA /* Environment */,
+				15C876452A4787FA00747BBA /* Reducer */,
+				15C876442A4787EE00747BBA /* State */,
+				15C876432A4787E600747BBA /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		15C8763F2A4786E900747BBA /* Series */ = {
+			isa = PBXGroup;
+			children = (
+				15C876482A47882500747BBA /* Action */,
+				15C8764D2A47884800747BBA /* API */,
+				15C876492A47882A00747BBA /* Environment */,
+				15C8764A2A47883400747BBA /* Reducer */,
+				15C8764B2A47883B00747BBA /* State */,
+				15C8764C2A47884200747BBA /* Views */,
+			);
+			path = Series;
+			sourceTree = "<group>";
+		};
+		15C876402A4786EF00747BBA /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				15C8764E2A47886B00747BBA /* Action */,
+				15C8764F2A47886F00747BBA /* API */,
+				15C876502A47887500747BBA /* Environment */,
+				15C876532A47889400747BBA /* Reducer */,
+				15C876522A47888500747BBA /* State */,
+				15C876512A47887E00747BBA /* Views */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		15C876412A47877600747BBA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		15C876422A4787E100747BBA /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		15C876432A4787E600747BBA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				15C8762E2A47852900747BBA /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		15C876442A4787EE00747BBA /* State */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		15C876452A4787FA00747BBA /* Reducer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Reducer;
+			sourceTree = "<group>";
+		};
+		15C876462A47880300747BBA /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		15C876472A47880800747BBA /* Action */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
+		15C876482A47882500747BBA /* Action */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
+		15C876492A47882A00747BBA /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		15C8764A2A47883400747BBA /* Reducer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Reducer;
+			sourceTree = "<group>";
+		};
+		15C8764B2A47883B00747BBA /* State */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		15C8764C2A47884200747BBA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		15C8764D2A47884800747BBA /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		15C8764E2A47886B00747BBA /* Action */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
+		15C8764F2A47886F00747BBA /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		15C876502A47887500747BBA /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		15C876512A47887E00747BBA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		15C876522A47888500747BBA /* State */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		15C876532A47889400747BBA /* Reducer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Reducer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,7 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15C8762F2A47852900747BBA /* ContentView.swift in Sources */,
+				15C8762F2A47852900747BBA /* HomeView.swift in Sources */,
 				15C8762D2A47852900747BBA /* TVMazeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
