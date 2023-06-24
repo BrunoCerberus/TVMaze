@@ -12,6 +12,7 @@
 		15C876312A47852A00747BBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15C876302A47852A00747BBA /* Assets.xcassets */; };
 		15C876352A47852A00747BBA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15C876342A47852A00747BBA /* Preview Assets.xcassets */; };
 		15C8763D2A47869500747BBA /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 15C8763C2A47869500747BBA /* ComposableArchitecture */; };
+		15C876562A47896A00747BBA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 15C876552A47896A00747BBA /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15C876562A47896A00747BBA /* Kingfisher in Frameworks */,
 				15C8763D2A47869500747BBA /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +267,7 @@
 			name = TVMaze;
 			packageProductDependencies = (
 				15C8763C2A47869500747BBA /* ComposableArchitecture */,
+				15C876552A47896A00747BBA /* Kingfisher */,
 			);
 			productName = TVMaze;
 			productReference = 15C876292A47852900747BBA /* TVMaze.app */;
@@ -296,6 +299,7 @@
 			mainGroup = 15C876202A47852900747BBA;
 			packageReferences = (
 				15C8763B2A47869500747BBA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				15C876542A47896A00747BBA /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 15C8762A2A47852900747BBA /* Products */;
 			projectDirPath = "";
@@ -550,6 +554,14 @@
 				minimumVersion = 0.54.1;
 			};
 		};
+		15C876542A47896A00747BBA /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -557,6 +569,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 15C8763B2A47869500747BBA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
+		};
+		15C876552A47896A00747BBA /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 15C876542A47896A00747BBA /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
