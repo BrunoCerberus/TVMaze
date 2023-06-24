@@ -23,6 +23,7 @@
 		15C876762A4795C500747BBA /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 15C876752A4795C500747BBA /* SnapshotTesting */; };
 		15C876782A47964900747BBA /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C876772A47964900747BBA /* Font.swift */; };
 		15C8767A2A47966500747BBA /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C876792A47966500747BBA /* FontSize.swift */; };
+		15C8767C2A47971D00747BBA /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C8767B2A47971D00747BBA /* Layout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		15C8766D2A47958300747BBA /* TVMazeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVMazeTests.swift; sourceTree = "<group>"; };
 		15C876772A47964900747BBA /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		15C876792A47966500747BBA /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
+		15C8767B2A47971D00747BBA /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,6 +303,7 @@
 				15C876622A4793DB00747BBA /* Color+Extension.swift */,
 				15C876772A47964900747BBA /* Font.swift */,
 				15C876792A47966500747BBA /* FontSize.swift */,
+				15C8767B2A47971D00747BBA /* Layout.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				15C8765B2A478ABE00747BBA /* View+Extensions.swift in Sources */,
 				15C8762D2A47852900747BBA /* TVMazeApp.swift in Sources */,
 				15C876782A47964900747BBA /* Font.swift in Sources */,
+				15C8767C2A47971D00747BBA /* Layout.swift in Sources */,
 				15C8765D2A478B6C00747BBA /* Image.swift in Sources */,
 				15C8765F2A47933C00747BBA /* DebugBorderStyle.swift in Sources */,
 				15C876632A4793DB00747BBA /* Color+Extension.swift in Sources */,
