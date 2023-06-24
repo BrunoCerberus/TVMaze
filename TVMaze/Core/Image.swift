@@ -9,4 +9,5 @@ import SwiftUI
 
 extension Image {
     static let defaultPlaceHolder: Image = Image("")
+    static let magnifyingGlass: Image = Image("magnifying-glass")
 }
