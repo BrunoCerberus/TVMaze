@@ -17,4 +17,17 @@ extension View {
             self
         }
     }
+    
+#if DEBUG
+    /// Debug the tree view structure
+    func debug() -> Self {
+        debugPrint(Mirror(reflecting: self).subjectType)
+        return self
+    }
+
+    /// Debug the view layout adding a dashed border to it
+    func debugBorder() -> some View {
+        modifier(DebugBorderStyle())
+    }
+#endif
 }

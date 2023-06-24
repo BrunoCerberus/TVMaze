@@ -16,6 +16,7 @@
 		15C876592A478A7800747BBA /* CacheImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C876582A478A7800747BBA /* CacheImageView.swift */; };
 		15C8765B2A478ABE00747BBA /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C8765A2A478ABE00747BBA /* View+Extensions.swift */; };
 		15C8765D2A478B6C00747BBA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C8765C2A478B6C00747BBA /* Image.swift */; };
+		15C8765F2A47933C00747BBA /* DebugBorderStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C8765E2A47933C00747BBA /* DebugBorderStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		15C876582A478A7800747BBA /* CacheImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheImageView.swift; sourceTree = "<group>"; };
 		15C8765A2A478ABE00747BBA /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		15C8765C2A478B6C00747BBA /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		15C8765E2A47933C00747BBA /* DebugBorderStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugBorderStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +264,7 @@
 				15C876582A478A7800747BBA /* CacheImageView.swift */,
 				15C8765A2A478ABE00747BBA /* View+Extensions.swift */,
 				15C8765C2A478B6C00747BBA /* Image.swift */,
+				15C8765E2A47933C00747BBA /* DebugBorderStyle.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				15C8765B2A478ABE00747BBA /* View+Extensions.swift in Sources */,
 				15C8762D2A47852900747BBA /* TVMazeApp.swift in Sources */,
 				15C8765D2A478B6C00747BBA /* Image.swift in Sources */,
+				15C8765F2A47933C00747BBA /* DebugBorderStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
