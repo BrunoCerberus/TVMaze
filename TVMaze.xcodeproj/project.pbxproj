@@ -27,6 +27,10 @@
 		15C8767F2A4797B500747BBA /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C8767E2A4797B500747BBA /* SearchView.swift */; };
 		15C876812A47E86C00747BBA /* SeriesCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C876802A47E86C00747BBA /* SeriesCard.swift */; };
 		15C876832A47F53D00747BBA /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C876822A47F53D00747BBA /* Home.swift */; };
+		15C876852A48AF0200747BBA /* APIDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C876842A48AF0200747BBA /* APIDataFetcher.swift */; };
+		15C876872A48AF2F00747BBA /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C876862A48AF2F00747BBA /* Fetcher.swift */; };
+		15C876892A48AF5500747BBA /* BaseCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C876882A48AF5500747BBA /* BaseCodable.swift */; };
+		15C8768B2A48AF8B00747BBA /* FetcherError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C8768A2A48AF8B00747BBA /* FetcherError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,10 @@
 		15C8767E2A4797B500747BBA /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		15C876802A47E86C00747BBA /* SeriesCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCard.swift; sourceTree = "<group>"; };
 		15C876822A47F53D00747BBA /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		15C876842A48AF0200747BBA /* APIDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDataFetcher.swift; sourceTree = "<group>"; };
+		15C876862A48AF2F00747BBA /* Fetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
+		15C876882A48AF5500747BBA /* BaseCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCodable.swift; sourceTree = "<group>"; };
+		15C8768A2A48AF8B00747BBA /* FetcherError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +172,10 @@
 		15C876412A47877600747BBA /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				15C876842A48AF0200747BBA /* APIDataFetcher.swift */,
+				15C876862A48AF2F00747BBA /* Fetcher.swift */,
+				15C876882A48AF5500747BBA /* BaseCodable.swift */,
+				15C8768A2A48AF8B00747BBA /* FetcherError.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -438,8 +450,12 @@
 				15C876812A47E86C00747BBA /* SeriesCard.swift in Sources */,
 				15C8765B2A478ABE00747BBA /* View+Extensions.swift in Sources */,
 				15C8762D2A47852900747BBA /* TVMazeApp.swift in Sources */,
+				15C876892A48AF5500747BBA /* BaseCodable.swift in Sources */,
+				15C876872A48AF2F00747BBA /* Fetcher.swift in Sources */,
 				15C876782A47964900747BBA /* Font.swift in Sources */,
+				15C8768B2A48AF8B00747BBA /* FetcherError.swift in Sources */,
 				15C8767C2A47971D00747BBA /* Layout.swift in Sources */,
+				15C876852A48AF0200747BBA /* APIDataFetcher.swift in Sources */,
 				15C8765D2A478B6C00747BBA /* Image.swift in Sources */,
 				15C8765F2A47933C00747BBA /* DebugBorderStyle.swift in Sources */,
 				15C876632A4793DB00747BBA /* Color+Extension.swift in Sources */,
