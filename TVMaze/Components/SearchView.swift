@@ -9,8 +9,10 @@ import SwiftUI
 
 struct SearchView: View {
     
-    struct Constants {
-        static let height = 70.0
+    private struct Constants {
+        static let height = 50.0
+        static let magnifyingGlassWidth = 24.0
+        static let magnifyingGlassHeight = 24.0
     }
     
     @Binding var search: String
@@ -19,7 +21,8 @@ struct SearchView: View {
         HStack(spacing: Layout.padding(2)) {
             Image.magnifyingGlass
                 .resizable()
-                .frame(width: Layout.padding(4), height: Layout.padding(4))
+                .scaledToFit()
+                .frame(width: Constants.magnifyingGlassWidth, height: Constants.magnifyingGlassHeight)
             TextField("Search", text: $search)
                 .font(.primary(.large))
                 .foregroundColor(.white20)

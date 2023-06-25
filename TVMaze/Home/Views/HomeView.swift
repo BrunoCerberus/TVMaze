@@ -15,11 +15,12 @@ struct HomeView: View {
             VStack(spacing: Layout.padding(2)) {
                 SearchView(search: viewStore.binding(\.$searchText))
                 ScrollView(showsIndicators: false) {
-                    VStack(alignment: .leading, spacing: Layout.padding(2.5)) {
+                    LazyVStack(alignment: .leading, spacing: Layout.padding(2.5)) {
                         seriesList
                     }
                 }
             }
+            .onAppear { viewStore.send(.fetchSeries) }
             .padding(.horizontal, Layout.padding(2))
             .navigationTitle("Home")
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -28,8 +29,10 @@ struct HomeView: View {
     }
     
     var seriesList: some View {
-        ForEach(0..<4) { _ in
-            SeriesCard()
+        WithViewStore(store) { viewStore  in
+            ForEach(viewStore.series, id: \.id) { serie in
+                SeriesCard(serie: serie)
+            }
         }
     }
 }
