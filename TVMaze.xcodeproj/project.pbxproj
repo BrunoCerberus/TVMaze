@@ -25,6 +25,7 @@
 		15C8767A2A47966500747BBA /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C876792A47966500747BBA /* FontSize.swift */; };
 		15C8767C2A47971D00747BBA /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C8767B2A47971D00747BBA /* Layout.swift */; };
 		15C8767F2A4797B500747BBA /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C8767E2A4797B500747BBA /* SearchView.swift */; };
+		15C876812A47E86C00747BBA /* SeriesCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C876802A47E86C00747BBA /* SeriesCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		15C876792A47966500747BBA /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
 		15C8767B2A47971D00747BBA /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		15C8767E2A4797B500747BBA /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		15C876802A47E86C00747BBA /* SeriesCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,6 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				15C8767E2A4797B500747BBA /* SearchView.swift */,
+				15C876802A47E86C00747BBA /* SeriesCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				15C8762F2A47852900747BBA /* HomeView.swift in Sources */,
 				15C876612A4793AD00747BBA /* Color.swift in Sources */,
 				15C8767F2A4797B500747BBA /* SearchView.swift in Sources */,
+				15C876812A47E86C00747BBA /* SeriesCard.swift in Sources */,
 				15C8765B2A478ABE00747BBA /* View+Extensions.swift in Sources */,
 				15C8762D2A47852900747BBA /* TVMazeApp.swift in Sources */,
 				15C876782A47964900747BBA /* Font.swift in Sources */,
