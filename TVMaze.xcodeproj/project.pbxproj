@@ -31,6 +31,10 @@
 		15C876872A48AF2F00747BBA /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C876862A48AF2F00747BBA /* Fetcher.swift */; };
 		15C876892A48AF5500747BBA /* BaseCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C876882A48AF5500747BBA /* BaseCodable.swift */; };
 		15C8768B2A48AF8B00747BBA /* FetcherError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C8768A2A48AF8B00747BBA /* FetcherError.swift */; };
+		15C8768D2A48B38D00747BBA /* HomeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C8768C2A48B38D00747BBA /* HomeClient.swift */; };
+		15C8768F2A48B48E00747BBA /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C8768E2A48B48E00747BBA /* HomeAPI.swift */; };
+		15C876912A48B55100747BBA /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C876902A48B55100747BBA /* HomeService.swift */; };
+		15C876942A48B5CA00747BBA /* SeriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C876932A48B5CA00747BBA /* SeriesResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +72,10 @@
 		15C876862A48AF2F00747BBA /* Fetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
 		15C876882A48AF5500747BBA /* BaseCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCodable.swift; sourceTree = "<group>"; };
 		15C8768A2A48AF8B00747BBA /* FetcherError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherError.swift; sourceTree = "<group>"; };
+		15C8768C2A48B38D00747BBA /* HomeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeClient.swift; sourceTree = "<group>"; };
+		15C8768E2A48B48E00747BBA /* HomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
+		15C876902A48B55100747BBA /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		15C876932A48B5CA00747BBA /* SeriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +143,7 @@
 		15C8763E2A4786DD00747BBA /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				15C876922A48B5C400747BBA /* Models */,
 				15C876422A4787E100747BBA /* API */,
 				15C876462A47880300747BBA /* Environment */,
 				15C876452A4787FA00747BBA /* Reducer */,
@@ -183,6 +192,9 @@
 		15C876422A4787E100747BBA /* API */ = {
 			isa = PBXGroup;
 			children = (
+				15C8768C2A48B38D00747BBA /* HomeClient.swift */,
+				15C8768E2A48B48E00747BBA /* HomeAPI.swift */,
+				15C876902A48B55100747BBA /* HomeService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -329,6 +341,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		15C876922A48B5C400747BBA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				15C876932A48B5CA00747BBA /* SeriesResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -441,12 +461,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15C876912A48B55100747BBA /* HomeService.swift in Sources */,
 				15C876592A478A7800747BBA /* CacheImageView.swift in Sources */,
 				15C876832A47F53D00747BBA /* Home.swift in Sources */,
 				15C8767A2A47966500747BBA /* FontSize.swift in Sources */,
 				15C8762F2A47852900747BBA /* HomeView.swift in Sources */,
+				15C8768D2A48B38D00747BBA /* HomeClient.swift in Sources */,
 				15C876612A4793AD00747BBA /* Color.swift in Sources */,
 				15C8767F2A4797B500747BBA /* SearchView.swift in Sources */,
+				15C8768F2A48B48E00747BBA /* HomeAPI.swift in Sources */,
+				15C876942A48B5CA00747BBA /* SeriesResponse.swift in Sources */,
 				15C876812A47E86C00747BBA /* SeriesCard.swift in Sources */,
 				15C8765B2A478ABE00747BBA /* View+Extensions.swift in Sources */,
 				15C8762D2A47852900747BBA /* TVMazeApp.swift in Sources */,
