@@ -6,13 +6,17 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct TVMazeApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                HomeView()
+                HomeView(store: Store(
+                    initialState: Home.State(),
+                    reducer: Home()
+                ))
             }
             .preferredColorScheme(.dark)
         }
