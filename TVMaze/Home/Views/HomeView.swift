@@ -20,7 +20,7 @@ struct HomeView: View {
         .padding(.horizontal, Layout.padding(2))
         .navigationTitle("Home")
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.background)
+        .background(Color.background.edgesIgnoringSafeArea(.all))
     }
     
     var seriesList: some View {
