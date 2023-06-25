@@ -15,7 +15,7 @@ struct SeriesCard: View {
     var body: some View {
         GeometryReader { geo in
             HStack(spacing: Layout.padding(2)) {
-                CacheImageView(url: serie.image.original)
+                CacheImageView(url: serie.image.medium)
                     .cornerRadius(Layout.padding(1))
                     .scaledToFit()
                     .frame(width: geo.size.width / 2)
@@ -33,15 +33,10 @@ struct SeriesCard: View {
                             .foregroundColor(.white)
                     }
                     
-                    HStack(spacing: Layout.padding(0.4)) {
-                        ForEach(serie.genres.prefix(3), id: \.self) { genre in
-                            Text(genre)
-                                .lineLimit(1)
-                                .truncationMode(.middle)
-                                .font(.primary(.medium))
-                                .foregroundColor(.white)
-                        }
-                    }
+                    Text(serie.genres.joined(separator: " "))
+                        .truncationMode(.middle)
+                        .font(.primary(.small2))
+                        .foregroundColor(.white)
                     
                     Text(serie.summary)
                         .lineLimit(5)
@@ -51,7 +46,6 @@ struct SeriesCard: View {
                     Spacer(minLength: 1)
                 }
                 .padding(.top, Layout.padding(2))
-                .frame(width: geo.size.width / 2)
             }
         }
         .frame(height: Constants.height)

@@ -24,7 +24,7 @@ struct HomeView: View {
             .padding(.horizontal, Layout.padding(2))
             .navigationTitle("Home")
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.background.edgesIgnoringSafeArea(.all))
+            .background(Color.background.edgesIgnoringSafeArea(.vertical))
         }
     }
     
