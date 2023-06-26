@@ -14,8 +14,6 @@ struct EpisodesDetails: BaseCodable, Equatable, Identifiable {
     let url: String
     let name: String
     let season, number: Int
-    let airdate: Date
-    let airstamp: String
     let runtime: Int
     let rating: Rating
     let image: ImageType
@@ -26,8 +24,6 @@ struct EpisodesDetails: BaseCodable, Equatable, Identifiable {
         case url
         case name
         case season, number
-        case airdate
-        case airstamp
         case runtime
         case rating
         case image

@@ -59,6 +59,7 @@
 		15C876C52A49077D00747BBA /* EpisodesDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C876C42A49077D00747BBA /* EpisodesDetailsResponse.swift */; };
 		15C876C72A4908A700747BBA /* SerieDetailsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C876C62A4908A700747BBA /* SerieDetailsClient.swift */; };
 		15C876C92A4934B400747BBA /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C876C82A4934B400747BBA /* Date+Extensions.swift */; };
+		15C876CD2A49C2EE00747BBA /* EpisodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C876CC2A49C2EE00747BBA /* EpisodeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,7 @@
 		15C876C42A49077D00747BBA /* EpisodesDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesDetailsResponse.swift; sourceTree = "<group>"; };
 		15C876C62A4908A700747BBA /* SerieDetailsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieDetailsClient.swift; sourceTree = "<group>"; };
 		15C876C82A4934B400747BBA /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		15C876CC2A49C2EE00747BBA /* EpisodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				15C876972A48F84A00747BBA /* SerieDetailsView.swift */,
+				15C876CC2A49C2EE00747BBA /* EpisodeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -527,6 +530,7 @@
 			files = (
 				15C876912A48B55100747BBA /* HomeService.swift in Sources */,
 				15C876592A478A7800747BBA /* CacheImageView.swift in Sources */,
+				15C876CD2A49C2EE00747BBA /* EpisodeView.swift in Sources */,
 				15C876B42A48FEF700747BBA /* Clamped.swift in Sources */,
 				15C876B22A48FED200747BBA /* DesignPageGeometry.swift in Sources */,
 				15C876832A47F53D00747BBA /* Home.swift in Sources */,

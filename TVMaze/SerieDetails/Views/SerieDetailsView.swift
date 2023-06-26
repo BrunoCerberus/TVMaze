@@ -27,9 +27,25 @@ struct SerieDetailsView: View {
     )
     var body: some View {
         WithViewStore(store) { viewStore in
-            VStack(spacing: Layout.padding(2)) {
+            GeometryReader { geo in
                 ScrollView(showsIndicators: false) {
-                    stickyHeader
+                    VStack(alignment: .leading, spacing: Layout.padding(2)) {
+                        stickyHeader
+                        VStack(spacing: Layout.padding(1)) {
+                            if viewStore.seasons.count > 0 {
+                                Tabs(
+                                    titles: viewStore.seasons.compactMap { "Season \($0.number)" },
+                                    currentPage: viewStore.binding(\.$currentPage),
+                                    currentPosition: $pagePosition,
+                                    tabType: .scrollable
+                                )
+                                .padding(.horizontal, Layout.padding(2))
+                                episodesListView
+                            }
+                        }
+                        .padding(.top, geo.size.width * Constants.coverHeightRation - 32)
+                        .padding(.horizontal)
+                    }
                 }
             }
             .onAppear { viewStore.send(.fetchSeasons) }
@@ -67,11 +83,24 @@ struct SerieDetailsView: View {
                         )
                     )
                     
-                    Text("Serie")
+                    Text("Seasons")
                         .font(.primary(.large21))
                         .foregroundColor(.white)
                         .padding(.top, (geometry.size.width * Constants.coverHeightRation) - 60)
                         .padding(.leading, 24)
+                }
+            }
+        }
+    }
+    
+    var episodesListView: some View {
+        WithViewStore(store) { viewStore in
+            VStack(spacing: Layout.padding(0)) {
+                ForEach(viewStore.episodes) { episode in
+                    EpisodeView(episode: episode)
+                    Divider()
+                        .frame(height: 1)
+                        .foregroundColor(.lightGray)
                 }
             }
         }
@@ -82,7 +111,72 @@ struct SerieDetailsView_Previews: PreviewProvider {
     static var previews: some View {
         SerieDetailsView(store: Store(
             initialState: SerieDetails.State(
-                posterImageURL: "https://static.tvmaze.com/uploads/images/original_untouched/163/407679.jpg"
+                posterImageURL: "https://static.tvmaze.com/uploads/images/original_untouched/163/407679.jpg",
+                seasons: [
+                    SeasonsDetails(
+                        id: 0,
+                        url: "",
+                        number: 1,
+                        name: "",
+                        episodeOrder: 1,
+                        premiereDate: .now,
+                        endDate: .now,
+                        image: ImageType(medium: "", original: ""),
+                        summary: ""
+                    ),
+                    SeasonsDetails(
+                        id: 1,
+                        url: "",
+                        number: 2,
+                        name: "",
+                        episodeOrder: 2,
+                        premiereDate: .now,
+                        endDate: .now,
+                        image: ImageType(medium: "", original: ""),
+                        summary: ""
+                    ),
+                    SeasonsDetails(
+                        id: 2,
+                        url: "",
+                        number: 2,
+                        name: "",
+                        episodeOrder: 3,
+                        premiereDate: .now,
+                        endDate: .now,
+                        image: ImageType(medium: "", original: ""),
+                        summary: ""
+                    )
+                ],
+                episodes: [
+                    EpisodesDetails(
+                        id: 0,
+                        url: "https://www.tvmaze.com/episodes/1/under-the-dome-1x01-pilot",
+                        name: "Pilot",
+                        season: 1,
+                        number: 1,
+                        runtime: 60,
+                        rating: Rating(average: 3.5),
+                        image: ImageType(
+                            medium: "https://static.tvmaze.com/uploads/images/medium_landscape/1/4388.jpg",
+                            original: "https://static.tvmaze.com/uploads/images/original_untouched/1/4388.jpg"
+                        ),
+                        summary: "When the residents of Chester's Mill find themselves trapped under a massive transparent dome with no way out, they struggle to survive as resources rapidly dwindle and panic quickly escalates."
+                    ),
+                    EpisodesDetails(
+                        id: 1,
+                        url: "https://www.tvmaze.com/episodes/1/under-the-dome-1x01-pilot",
+                        name: "Pilot",
+                        season: 1,
+                        number: 2,
+                        runtime: 60,
+                        rating: Rating(average: 3.5),
+                        image: ImageType(
+                            medium: "https://static.tvmaze.com/uploads/images/medium_landscape/1/4388.jpg",
+                            original: "https://static.tvmaze.com/uploads/images/original_untouched/1/4388.jpg"
+                        ),
+                        summary: "When the residents of Chester's Mill find themselves trapped under a massive transparent dome with no way out, they struggle to survive as resources rapidly dwindle and panic quickly escalates."
+                    )
+                ]
             ),
             reducer: SerieDetails()
         ))

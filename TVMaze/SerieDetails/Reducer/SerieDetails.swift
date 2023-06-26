@@ -43,7 +43,7 @@ struct SerieDetails: ReducerProtocol {
     func core(into state: inout State, action: Action) -> EffectTask<Action> {
         switch action {
         case .binding(\.$currentPage):
-            return .none
+            return .task { .fetchSeasons }
         case .fetchSeasons:
             return .run { [serieID = state.serieID] send in
                 await send(.fetchSeasonsResponse(TaskResult { try await self.serieDetailsClient.fetchSeasons(serieID) }))

@@ -33,7 +33,7 @@ struct TVMazeApp: App {
             NavigationStack {
                 HomeView(store: Store(
                     initialState: Home.State(),
-                    reducer: Home()
+                    reducer: Home()._printChanges()
                 ))
             }
             .preferredColorScheme(.dark)

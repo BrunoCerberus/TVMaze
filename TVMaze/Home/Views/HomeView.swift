@@ -51,9 +51,12 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(store: Store(
-            initialState: Home.State(),
-            reducer: Home()
-        ))
+        NavigationStack {
+            HomeView(store: Store(
+                initialState: Home.State(),
+                reducer: Home()
+            ))
+            .navigationBarHidden(true)
+        }
     }
 }

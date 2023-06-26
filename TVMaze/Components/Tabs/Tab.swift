@@ -19,7 +19,7 @@ public struct Tab: View {
     
     public var body: some View {
         Text(label)
-            .font(.primary(.large2, weight: .semibold))
+            .font(.secondary(.large, weight: .semibold))
             .foregroundColor(isActive ? Color.white : Color.white70)
             .padding(.vertical, Layout.padding(1.5))
     }
