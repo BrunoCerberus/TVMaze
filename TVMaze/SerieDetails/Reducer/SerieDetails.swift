@@ -9,6 +9,7 @@ import ComposableArchitecture
 
 struct SerieDetails: ReducerProtocol {
     struct State: Equatable {
+        @PresentationState var episodeDetail: EpisodeDetails.State?
         @BindingState var currentPage: Int = 0
         var posterImageURL: String = ""
         var serieID: Int = 0
@@ -26,14 +27,18 @@ struct SerieDetails: ReducerProtocol {
         case fetchSeasonsResponse(TaskResult<SeasonsDetailsResponse>)
         case fetchEpisodes
         case fetchEpisodesResponse(TaskResult<EpisodesDetailsResponse>)
+        case episodeDetailsDispatch(PresentationAction<EpisodeDetails.Action>)
+        case openEpisode(EpisodesDetails)
     }
     
     var body: some ReducerProtocol<State, Action> {
         BindingReducer()
         Reduce(self.core)
+            .ifLet(\.$episodeDetail, action: /Action.episodeDetailsDispatch) {
+                EpisodeDetails()
+            }
     }
     
-    @Dependency(\.continuousClock) var clock
     @Dependency(\.serieDetailsClient) var serieDetailsClient
     private enum CancelID {
         case seasonRequest
@@ -63,6 +68,11 @@ struct SerieDetails: ReducerProtocol {
             state.episodes = IdentifiedArrayOf(uniqueElements: response)
             return .none
         case let .fetchEpisodesResponse(.failure(error)):
+            return .none
+        case .episodeDetailsDispatch:
+            return .none
+        case let .openEpisode(episode):
+            state.episodeDetail = EpisodeDetails.State(episode: episode)
             return .none
         case .binding:
             return .none

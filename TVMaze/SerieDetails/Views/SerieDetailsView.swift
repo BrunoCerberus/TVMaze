@@ -53,6 +53,14 @@ struct SerieDetailsView: View {
             .navigationBarTitleDisplayMode(.inline)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.background.edgesIgnoringSafeArea(.vertical))
+            .sheet(
+                store: store.scope(
+                    state: \.$episodeDetail,
+                    action: { .episodeDetailsDispatch($0) }),
+                content: { store in
+                    EpisodeDetailsView(store: store)
+                }
+            )
         }
     }
     
@@ -97,7 +105,9 @@ struct SerieDetailsView: View {
         WithViewStore(store) { viewStore in
             LazyVStack(spacing: Layout.padding(0)) {
                 ForEach(viewStore.episodes) { episode in
-                    EpisodeView(episode: episode)
+                    Button(action: { viewStore.send(.openEpisode(episode)) }) {
+                        EpisodeView(episode: episode)
+                    }
                     Divider()
                         .frame(height: 1)
                         .foregroundColor(.lightGray)
@@ -154,6 +164,8 @@ struct SerieDetailsView_Previews: PreviewProvider {
                         name: "Pilot",
                         season: 1,
                         number: 1,
+                        airdate: .now,
+                        airTime: "22:30",
                         runtime: 60,
                         rating: Rating(average: 3.5),
                         image: ImageType(
@@ -168,6 +180,8 @@ struct SerieDetailsView_Previews: PreviewProvider {
                         name: "Pilot",
                         season: 1,
                         number: 2,
+                        airdate: .now,
+                        airTime: "22:30",
                         runtime: 60,
                         rating: Rating(average: 3.5),
                         image: ImageType(

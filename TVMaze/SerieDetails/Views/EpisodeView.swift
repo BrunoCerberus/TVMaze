@@ -58,6 +58,8 @@ struct EpisodeView_Previews: PreviewProvider {
             name: "Pilot",
             season: 1,
             number: 1,
+            airdate: .now,
+            airTime: "22:30",
             runtime: 60,
             rating: Rating(average: 3.5),
             image: ImageType(
