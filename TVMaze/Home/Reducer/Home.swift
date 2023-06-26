@@ -40,18 +40,18 @@ struct Home: ReducerProtocol {
     func core(into state: inout State, action: Action) -> EffectTask<Action> {
         switch action {
         case .binding(\.$searchText):
-            if state.searchText.isEmpty {
-                return .none
-            }
-            return .run { send in
+            return .run { [searchText = state.searchText] send in
                 try await self.clock.sleep(for: .seconds(1))
-                await send(.fetchSearchSeries, animation: .default)
+                if searchText.isEmpty {
+                    await send(.fetchSeries, animation: .default)
+                } else {
+                    await send(.fetchSearchSeries, animation: .default)
+                }
             }
             .cancellable(id: CancelID.searchInput, cancelInFlight: true)
         case .seriesDetail:
             return .none
         case .fetchSearchSeries:
-            print(state.searchText)
             return .run { [searchText = state.searchText] send in
                 await send(.fetchSearchSeriesResponse(TaskResult { try await self.homeClient.fetchSearch(searchText) }))
             }

@@ -29,7 +29,7 @@ struct HomeView: View {
                         SerieDetailsView(store: store)
                     })
             }
-            .onAppear { viewStore.send(.fetchSeries) }
+            .onFirstAppear { viewStore.send(.fetchSeries) }
             .padding(.horizontal, Layout.padding(2))
             .navigationTitle("Home")
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -40,10 +40,9 @@ struct HomeView: View {
     var seriesList: some View {
         WithViewStore(store) { viewStore  in
             ForEach(viewStore.series) { serie in
-                SeriesCard(serie: serie)
-                    .onTapGesture {
-                        viewStore.send(.openSerie(serie.id, serie.image?.original ?? ""))
-                    }
+                Button(action: { viewStore.send(.openSerie(serie.id, serie.image?.original ?? "")) }) {
+                    SeriesCard(serie: serie)
+                }
             }
         }
     }
