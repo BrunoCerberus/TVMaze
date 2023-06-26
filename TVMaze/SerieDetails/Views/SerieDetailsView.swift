@@ -39,7 +39,6 @@ struct SerieDetailsView: View {
                                     currentPosition: $pagePosition,
                                     tabType: .scrollable
                                 )
-                                .padding(.horizontal, Layout.padding(2))
                                 episodesListView
                             }
                         }

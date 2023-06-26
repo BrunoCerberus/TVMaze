@@ -24,26 +24,26 @@ struct EpisodeDetailsView: View {
                             .foregroundColor(.white)
                         
                         Text("Rating: \(episode.rating.average ?? 0)")
-                            .font(.primary(.medium2, weight: .semibold))
+                            .font(.primary(.small2))
                             .foregroundColor(.white)
                         
-                        Text("Release: \(episode.airdate?.toString(with: .dayMonthDate) ?? "") \(episode.airTime ?? "")")
-                            .font(.primary(.medium2, weight: .semibold))
+                        Text("Release: \(episode.airdate?.toString(with: .shortDate) ?? "") \(episode.airTime ?? "")")
+                            .font(.primary(.small2))
                             .foregroundColor(.white)
                         
                         Text("Episode: \(episode.number ?? 0)")
-                            .font(.primary(.medium2, weight: .semibold))
+                            .font(.primary(.small2))
                             .foregroundColor(.white)
                     }
                     Spacer(minLength: 1)
                 }
-                .padding(.horizontal, Layout.padding(1))
                 
                 Text(episode.summary)
                     .font(.secondary(.medium))
                     .foregroundColor(.text1)
                 Spacer(minLength: 1)
             }
+            .padding(.horizontal, Layout.padding(2))
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.background.edgesIgnoringSafeArea(.vertical))
         }
