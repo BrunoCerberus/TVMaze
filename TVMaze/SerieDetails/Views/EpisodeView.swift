@@ -14,7 +14,7 @@ struct EpisodeView: View {
     }
     var body: some View {
         HStack(spacing: Layout.padding(2)) {
-            CacheImageView(url: episode.image.medium)
+            CacheImageView(url: episode.image?.medium ?? "")
                 .scaledToFit()
                 .frame(width: 170.0, height: 100.0)
             VStack(alignment: .leading, spacing: Layout.padding(0.6)) {
@@ -22,7 +22,7 @@ struct EpisodeView: View {
                     .lineLimit(2)
                     .font(.primary(.largeMedium, weight: .bold))
                     .foregroundColor(.white)
-                Text("Episode: \(episode.number)")
+                Text("Episode: \(episode.number ?? 0)")
                     .lineLimit(1)
                     .font(.primary(.small3, weight: .regular))
                     .foregroundColor(.white)

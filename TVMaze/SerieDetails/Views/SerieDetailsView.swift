@@ -95,7 +95,7 @@ struct SerieDetailsView: View {
     
     var episodesListView: some View {
         WithViewStore(store) { viewStore in
-            VStack(spacing: Layout.padding(0)) {
+            LazyVStack(spacing: Layout.padding(0)) {
                 ForEach(viewStore.episodes) { episode in
                     EpisodeView(episode: episode)
                     Divider()

@@ -17,7 +17,7 @@ struct SeasonsDetails: BaseCodable, Equatable, Identifiable {
     let episodeOrder: Int
     let premiereDate, endDate: Date
     let image: ImageType
-    let summary: String
+    let summary: String?
     
     enum CodingKeys: String, CodingKey {
         case id

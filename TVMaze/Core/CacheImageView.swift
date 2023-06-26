@@ -73,9 +73,9 @@ struct CacheImageView: View {
                 .isHidden(state == .failed)
             
             if state == .failed {
-                fallback
-                    .resizable()
-                    .scaledToFit()
+                Text("NO IMAGE")
+                    .font(.primary(.large))
+                    .foregroundColor(.white)
             }
         }
     }
