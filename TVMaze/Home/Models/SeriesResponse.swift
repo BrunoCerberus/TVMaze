@@ -9,7 +9,7 @@ import Foundation
 
 typealias SeriesResponse = [Series]
 
-struct Series: BaseCodable, Equatable {
+struct Series: BaseCodable, Equatable, Identifiable {
     let id: Int
     let url: String
     let name: String

@@ -9,8 +9,9 @@ import ComposableArchitecture
 
 struct Home: ReducerProtocol {
     struct State: Equatable {
+        @PresentationState var serieDetail: SerieDetails.State?
         @BindingState var searchText: String = ""
-        var series: [Series] = []
+        var series: IdentifiedArrayOf<Series> = []
     }
     
     enum Action: Equatable, BindableAction {
@@ -19,11 +20,16 @@ struct Home: ReducerProtocol {
         case search
         case fetchSeries
         case fetchSeriesResponse(TaskResult<SeriesResponse>)
+        case serieDetailsDispatch(PresentationAction<SerieDetails.Action>)
+        case openSerie(Int, String)
     }
     
-    var body: some ReducerProtocol<State, Action> {
+    var body: some ReducerProtocolOf<Self> {
         BindingReducer()
         Reduce(self.core)
+            .ifLet(\.$serieDetail, action: /Action.serieDetailsDispatch) {
+                SerieDetails()
+            }
     }
     
     @Dependency(\.continuousClock) var clock
@@ -48,9 +54,17 @@ struct Home: ReducerProtocol {
                 await send(.fetchSeriesResponse(TaskResult { try await self.homeClient.fetchSeries() }))
             }
         case let .fetchSeriesResponse(.success(response)):
-            state.series = response
+            state.series = IdentifiedArrayOf(uniqueElements: response)
             return .none
         case let .fetchSeriesResponse(.failure(error)):
+            return .none
+        case .serieDetailsDispatch:
+            return .none
+        case let .openSerie(serieID, cover):
+            state.serieDetail = SerieDetails.State(
+                posterImageURL: cover,
+                serieID: serieID
+            )
             return .none
         case .binding:
             return .none

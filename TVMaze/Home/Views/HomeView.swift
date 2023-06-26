@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ComposableArchitecture
+
 struct HomeView: View {
     let store: StoreOf<Home>
 
@@ -19,6 +20,14 @@ struct HomeView: View {
                         seriesList
                     }
                 }
+                .navigationDestination(
+                    store: self.store.scope(
+                        state: \.$serieDetail,
+                        action: { .serieDetailsDispatch($0) }
+                    ),
+                    destination: { store in
+                        SerieDetailsView(store: store)
+                    })
             }
             .onAppear { viewStore.send(.fetchSeries) }
             .padding(.horizontal, Layout.padding(2))
@@ -30,8 +39,11 @@ struct HomeView: View {
     
     var seriesList: some View {
         WithViewStore(store) { viewStore  in
-            ForEach(viewStore.series, id: \.id) { serie in
+            ForEach(viewStore.series) { serie in
                 SeriesCard(serie: serie)
+                    .onTapGesture {
+                        viewStore.send(.openSerie(serie.id, serie.image.original))
+                    }
             }
         }
     }

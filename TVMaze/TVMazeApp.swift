@@ -12,7 +12,7 @@ import ComposableArchitecture
 struct TVMazeApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationView {
+            NavigationStack {
                 HomeView(store: Store(
                     initialState: Home.State(),
                     reducer: Home()

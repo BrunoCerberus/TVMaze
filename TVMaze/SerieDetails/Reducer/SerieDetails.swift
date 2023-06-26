@@ -12,8 +12,8 @@ struct SerieDetails: ReducerProtocol {
         @BindingState var currentPage: Int = 0
         var posterImageURL: String = ""
         var serieID: Int = 0
-        var seasons: [SeasonsDetails] = []
-        var episodes: [EpisodesDetails] = []
+        var seasons: IdentifiedArrayOf<SeasonsDetails> = []
+        var episodes: IdentifiedArrayOf<EpisodesDetails> = []
         
         var episodeID: Int {
             seasons[currentPage].id
@@ -45,7 +45,7 @@ struct SerieDetails: ReducerProtocol {
                 await send(.fetchSeasonsResponse(TaskResult { try await self.serieDetailsClient.fetchSeasons(serieID) }))
             }
         case let .fetchSeasonsResponse(.success(response)):
-            state.seasons = response
+            state.seasons = IdentifiedArrayOf(uniqueElements: response)
             return .task { .fetchEpisodes }
         case let .fetchSeasonsResponse(.failure(error)):
             return .none
@@ -54,7 +54,7 @@ struct SerieDetails: ReducerProtocol {
                 await send(.fetchEpisodesResponse(TaskResult { try await self.serieDetailsClient.fetchEpisodes(episodeID) }))
             }
         case let .fetchEpisodesResponse(.success(response)):
-            state.episodes = response
+            state.episodes = IdentifiedArrayOf(uniqueElements: response)
             return .none
         case let .fetchEpisodesResponse(.failure(error)):
             return .none
