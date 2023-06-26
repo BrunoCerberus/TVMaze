@@ -15,4 +15,6 @@ extension Color {
     static let lightGray: Color = Color(hex: "424242")
     static let background: Color = Color(hex: "000000")
     static let text1: Color = Color(hex: "888888")
+    static let scanBackground: Color = Color(hex: "0B0B1E")
+    static let defaultText: Color = Color(hex: "646693")
 }

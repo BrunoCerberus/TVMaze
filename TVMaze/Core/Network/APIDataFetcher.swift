@@ -62,6 +62,9 @@ open class APIDataFetcher<T: Fetcher> {
             
             do {
                 let decoder: JSONDecoder = JSONDecoder()
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = Date.dateFormatStyle.reversedStashedDate.rawValue
+                decoder.dateDecodingStrategy = .formatted(dateFormatter)
                 let decodedResponse: V = try decoder.decode(dataType.self, from: data)
                 completion?(.success(decodedResponse))
             } catch {

@@ -58,6 +58,7 @@
 		15C876C32A49041A00747BBA /* SeasonsDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C876C22A49041A00747BBA /* SeasonsDetailsResponse.swift */; };
 		15C876C52A49077D00747BBA /* EpisodesDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C876C42A49077D00747BBA /* EpisodesDetailsResponse.swift */; };
 		15C876C72A4908A700747BBA /* SerieDetailsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C876C62A4908A700747BBA /* SerieDetailsClient.swift */; };
+		15C876C92A4934B400747BBA /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C876C82A4934B400747BBA /* Date+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,7 @@
 		15C876C22A49041A00747BBA /* SeasonsDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonsDetailsResponse.swift; sourceTree = "<group>"; };
 		15C876C42A49077D00747BBA /* EpisodesDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesDetailsResponse.swift; sourceTree = "<group>"; };
 		15C876C62A4908A700747BBA /* SerieDetailsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieDetailsClient.swift; sourceTree = "<group>"; };
+		15C876C82A4934B400747BBA /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -343,6 +345,7 @@
 				15C876A42A48FD9700747BBA /* View+Geometry.swift */,
 				15C876B32A48FEF700747BBA /* Clamped.swift */,
 				15C876B92A48FF8C00747BBA /* PageViewModifiers.swift */,
+				15C876C82A4934B400747BBA /* Date+Extensions.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -555,6 +558,7 @@
 				15C876AE2A48FE6700747BBA /* DesignPageDirection.swift in Sources */,
 				15C876782A47964900747BBA /* Font.swift in Sources */,
 				15C876AA2A48FE1A00747BBA /* PageViewControllerRepresentable.swift in Sources */,
+				15C876C92A4934B400747BBA /* Date+Extensions.swift in Sources */,
 				15C8768B2A48AF8B00747BBA /* FetcherError.swift in Sources */,
 				15C8767C2A47971D00747BBA /* Layout.swift in Sources */,
 				15C876852A48AF0200747BBA /* APIDataFetcher.swift in Sources */,

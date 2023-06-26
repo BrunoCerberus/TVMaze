@@ -14,13 +14,14 @@ struct SerieDetailsView: View {
     @State private var pagePosition: CGFloat = 0
 
     private struct Constants {
-        static let nftHeaderRatio: CGFloat = 1.2
+        static let coverHeightRation: CGFloat = 1.3
     }
     let gradient: Gradient = Gradient(
         stops: [
             Gradient.Stop(color: .background.opacity(0), location: 0),
-            Gradient.Stop(color: .background.opacity(0.1), location: 0.2),
-            Gradient.Stop(color: .background.opacity(0.60), location: 0.85),
+            Gradient.Stop(color: .background.opacity(0.4), location: 0.2),
+            Gradient.Stop(color: .background.opacity(0.6), location: 0.5),
+            Gradient.Stop(color: .background.opacity(0.90), location: 0.85),
             Gradient.Stop(color: .background, location: 1)
         ]
     )
@@ -33,6 +34,7 @@ struct SerieDetailsView: View {
             }
             .onAppear { viewStore.send(.fetchSeasons) }
             .navigationTitle("Serie")
+            .navigationBarTitleDisplayMode(.inline)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.background.edgesIgnoringSafeArea(.vertical))
         }
@@ -46,13 +48,13 @@ struct SerieDetailsView: View {
                         if geometry.frame(in: .global).minY <= 0 {
                             CacheImageView(url: viewStore.posterImageURL)
                                 .scaledToFill()
-                                .frame(width: geometry.size.width, height: geometry.size.width * Constants.nftHeaderRatio)
+                                .frame(width: geometry.size.width, height: geometry.size.width * Constants.coverHeightRation)
                                 .offset(y: geometry.frame(in: .global).minY / 9)
                                 .clipped()
                         } else {
                             CacheImageView(url: viewStore.posterImageURL)
                                 .scaledToFill()
-                                .frame(width: geometry.size.width, height: geometry.size.width * Constants.nftHeaderRatio + geometry.frame(in: .global).minY)
+                                .frame(width: geometry.size.width, height: geometry.size.width * Constants.coverHeightRation + geometry.frame(in: .global).minY)
                                 .clipped()
                                 .offset(y: -geometry.frame(in: .global).minY)
                         }
@@ -68,7 +70,7 @@ struct SerieDetailsView: View {
                     Text("Serie")
                         .font(.primary(.large21))
                         .foregroundColor(.white)
-                        .padding(.top, (geometry.size.width * Constants.nftHeaderRatio) - 60)
+                        .padding(.top, (geometry.size.width * Constants.coverHeightRation) - 60)
                         .padding(.leading, 24)
                 }
             }
