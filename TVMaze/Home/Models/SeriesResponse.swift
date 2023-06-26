@@ -16,7 +16,7 @@ struct Series: BaseCodable, Equatable, Identifiable {
     let language: String
     let genres: [String]
     let rating: Rating
-    let image: ImageType
+    let image: ImageType?
     let summary: String
     
     enum CodingKeys: String, CodingKey {

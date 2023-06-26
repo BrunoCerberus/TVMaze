@@ -17,9 +17,10 @@ struct Home: ReducerProtocol {
     enum Action: Equatable, BindableAction {
         case binding(BindingAction<State>)
         case seriesDetail
-        case search
         case fetchSeries
         case fetchSeriesResponse(TaskResult<SeriesResponse>)
+        case fetchSearchSeries
+        case fetchSearchSeriesResponse(TaskResult<SearchSeriesResponse>)
         case serieDetailsDispatch(PresentationAction<SerieDetails.Action>)
         case openSerie(Int, String)
     }
@@ -39,15 +40,25 @@ struct Home: ReducerProtocol {
     func core(into state: inout State, action: Action) -> EffectTask<Action> {
         switch action {
         case .binding(\.$searchText):
+            if state.searchText.isEmpty {
+                return .none
+            }
             return .run { send in
                 try await self.clock.sleep(for: .seconds(1))
-                await send(.search, animation: .default)
+                await send(.fetchSearchSeries, animation: .default)
             }
             .cancellable(id: CancelID.searchInput, cancelInFlight: true)
         case .seriesDetail:
             return .none
-        case .search:
+        case .fetchSearchSeries:
             print(state.searchText)
+            return .run { [searchText = state.searchText] send in
+                await send(.fetchSearchSeriesResponse(TaskResult { try await self.homeClient.fetchSearch(searchText) }))
+            }
+        case let .fetchSearchSeriesResponse(.success(response)):
+            state.series = IdentifiedArrayOf(uniqueElements: response.map { $0.show })
+            return .none
+        case let .fetchSearchSeriesResponse(.failure(error)):
             return .none
         case .fetchSeries:
             return .run { send in

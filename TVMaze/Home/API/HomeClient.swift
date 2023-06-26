@@ -16,6 +16,7 @@ extension DependencyValues {
 
 struct HomeClient {
     var fetchSeries: @Sendable () async throws -> SeriesResponse
+    var fetchSearch: @Sendable (String) async throws -> SearchSeriesResponse
     
     enum Failure: Error, Equatable {
         case fetchSeriesError(String)
@@ -30,12 +31,17 @@ extension HomeClient: DependencyKey {
         fetchSeries: {
             let service: HomeServiceProtocol = HomeService()
             return try await service.fetchSeries()
+        },
+        fetchSearch: { query in
+            let service: HomeServiceProtocol = HomeService()
+            return try await service.fetchSearch(query)
         }
     )
     
     /// This is the "unimplemented" fact dependency that is useful to plug into tests that you want
     /// to prove do not need the dependency.
     static let testValue = Self(
-        fetchSeries: unimplemented("\(Self.self).fetchSeries")
+        fetchSeries: unimplemented("\(Self.self).fetchSeries"),
+        fetchSearch: unimplemented("\(Self.self).fetchSearch")
     )
 }

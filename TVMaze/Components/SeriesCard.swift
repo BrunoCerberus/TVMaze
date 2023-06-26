@@ -15,7 +15,7 @@ struct SeriesCard: View {
     var body: some View {
         GeometryReader { geo in
             HStack(spacing: Layout.padding(2)) {
-                CacheImageView(url: serie.image.medium)
+                CacheImageView(url: serie.image?.medium ?? "")
                     .cornerRadius(Layout.padding(1))
                     .scaledToFit()
                     .frame(width: geo.size.width / 2)

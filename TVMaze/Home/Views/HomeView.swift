@@ -42,7 +42,7 @@ struct HomeView: View {
             ForEach(viewStore.series) { serie in
                 SeriesCard(serie: serie)
                     .onTapGesture {
-                        viewStore.send(.openSerie(serie.id, serie.image.original))
+                        viewStore.send(.openSerie(serie.id, serie.image?.original ?? ""))
                     }
             }
         }

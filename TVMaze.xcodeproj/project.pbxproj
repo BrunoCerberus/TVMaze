@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		15AC661A2A49FA0F002CB7AC /* EpisodeDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AC66192A49FA0F002CB7AC /* EpisodeDetails.swift */; };
+		15AC661C2A4A08AD002CB7AC /* SearchSeriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AC661B2A4A08AD002CB7AC /* SearchSeriesResponse.swift */; };
 		15C8762D2A47852900747BBA /* TVMazeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C8762C2A47852900747BBA /* TVMazeApp.swift */; };
 		15C8762F2A47852900747BBA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C8762E2A47852900747BBA /* HomeView.swift */; };
 		15C876312A47852A00747BBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15C876302A47852A00747BBA /* Assets.xcassets */; };
@@ -76,6 +77,7 @@
 
 /* Begin PBXFileReference section */
 		15AC66192A49FA0F002CB7AC /* EpisodeDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetails.swift; sourceTree = "<group>"; };
+		15AC661B2A4A08AD002CB7AC /* SearchSeriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSeriesResponse.swift; sourceTree = "<group>"; };
 		15C876292A47852900747BBA /* TVMaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVMaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C8762C2A47852900747BBA /* TVMazeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVMazeApp.swift; sourceTree = "<group>"; };
 		15C8762E2A47852900747BBA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -350,6 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				15C876932A48B5CA00747BBA /* SeriesResponse.swift */,
+				15AC661B2A4A08AD002CB7AC /* SearchSeriesResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				15C876B62A48FF2300747BBA /* DesignPageControllerDataSource.swift in Sources */,
 				15C8769F2A48FC6700747BBA /* Tab.swift in Sources */,
 				15C8767F2A4797B500747BBA /* SearchView.swift in Sources */,
+				15AC661C2A4A08AD002CB7AC /* SearchSeriesResponse.swift in Sources */,
 				15C876C32A49041A00747BBA /* SeasonsDetailsResponse.swift in Sources */,
 				15C8768F2A48B48E00747BBA /* HomeAPI.swift in Sources */,
 				15C876C02A49033B00747BBA /* SerieDetailsService.swift in Sources */,
