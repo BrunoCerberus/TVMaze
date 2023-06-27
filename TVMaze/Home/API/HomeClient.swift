@@ -37,11 +37,11 @@ extension HomeClient: DependencyKey {
             return try await service.fetchSearch(query)
         }
     )
-    
-    /// This is the "unimplemented" fact dependency that is useful to plug into tests that you want
-    /// to prove do not need the dependency.
+}
+
+extension HomeClient: TestDependencyKey {
     static let testValue = Self(
-        fetchSeries: unimplemented("\(Self.self).fetchSeries"),
-        fetchSearch: unimplemented("\(Self.self).fetchSearch")
+        fetchSeries: { [] },
+        fetchSearch: { _ in [] }
     )
 }

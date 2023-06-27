@@ -48,6 +48,7 @@ struct SeriesCard: View {
                 .padding(.top, Layout.padding(2))
             }
         }
+        .multilineTextAlignment(.leading)
         .frame(height: Constants.height)
         .frame(maxWidth: .infinity)
     }
