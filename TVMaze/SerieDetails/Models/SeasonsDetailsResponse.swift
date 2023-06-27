@@ -14,8 +14,8 @@ struct SeasonsDetails: BaseCodable, Equatable, Identifiable {
     let url: String
     let number: Int
     let name: String
-    let episodeOrder: Int
-    let premiereDate, endDate: Date
+    let episodeOrder: Int?
+    let premiereDate, endDate: Date?
     let image: ImageType?
     let summary: String?
     
