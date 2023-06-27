@@ -9,6 +9,7 @@ import ComposableArchitecture
 
 struct Home: ReducerProtocol {
     struct State: Equatable {
+        var viewState: ViewState = .idle
         @PresentationState var serieDetail: SerieDetails.State?
         @BindingState var searchText: String = ""
         var series: IdentifiedArrayOf<Series> = []
@@ -52,22 +53,28 @@ struct Home: ReducerProtocol {
         case .seriesDetail:
             return .none
         case .fetchSearchSeries:
+            state.viewState = .loading
             return .run { [searchText = state.searchText] send in
                 await send(.fetchSearchSeriesResponse(TaskResult { try await self.homeClient.fetchSearch(searchText) }))
             }
         case let .fetchSearchSeriesResponse(.success(response)):
+            state.viewState = .loaded
             state.series = IdentifiedArrayOf(uniqueElements: response.map { $0.show })
             return .none
-        case let .fetchSearchSeriesResponse(.failure(error)):
+        case .fetchSearchSeriesResponse(.failure):
+            state.viewState = .loaded
             return .none
         case .fetchSeries:
+            state.viewState = .loading
             return .run { send in
                 await send(.fetchSeriesResponse(TaskResult { try await self.homeClient.fetchSeries() }))
             }
         case let .fetchSeriesResponse(.success(response)):
+            state.viewState = .loaded
             state.series = IdentifiedArrayOf(uniqueElements: response)
             return .none
-        case let .fetchSeriesResponse(.failure(error)):
+        case .fetchSeriesResponse(.failure):
+            state.viewState = .loaded
             return .none
         case .serieDetailsDispatch:
             return .none

@@ -17,7 +17,11 @@ struct HomeView: View {
                 SearchView(search: viewStore.binding(\.$searchText))
                 ScrollView(showsIndicators: false) {
                     LazyVStack(alignment: .leading, spacing: Layout.padding(2.5)) {
-                        seriesList
+                        if viewStore.viewState == .loading || viewStore.viewState == .idle {
+                            skeleton
+                        } else {
+                            seriesList
+                        }
                     }
                 }
                 .navigationDestination(
@@ -34,6 +38,15 @@ struct HomeView: View {
             .navigationTitle("Home")
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.background.edgesIgnoringSafeArea(.vertical))
+        }
+    }
+    
+    var skeleton: some View {
+        WithViewStore(store) { viewStore in
+            ForEach(0..<4) { _ in
+                SeriesCard(serie: .mock)
+            }
+            .redacted(reason: viewStore.viewState == .loading ? .placeholder : .init())
         }
     }
     

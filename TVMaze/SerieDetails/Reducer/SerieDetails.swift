@@ -9,6 +9,7 @@ import ComposableArchitecture
 
 struct SerieDetails: ReducerProtocol {
     struct State: Equatable {
+        var viewState: ViewState = .idle
         @PresentationState var episodeDetail: EpisodeDetails.State?
         @BindingState var currentPage: Int = 0
         var posterImageURL: String = ""
@@ -50,24 +51,30 @@ struct SerieDetails: ReducerProtocol {
         case .binding(\.$currentPage):
             return .task { .fetchSeasons }
         case .fetchSeasons:
+            state.viewState = .loading
             return .run { [serieID = state.serieID] send in
                 await send(.fetchSeasonsResponse(TaskResult { try await self.serieDetailsClient.fetchSeasons(serieID) }))
             }
             .cancellable(id: CancelID.seasonRequest, cancelInFlight: true)
         case let .fetchSeasonsResponse(.success(response)):
+            state.viewState = .loaded
             state.seasons = IdentifiedArrayOf(uniqueElements: response)
             return .task { .fetchEpisodes }
-        case let .fetchSeasonsResponse(.failure(error)):
+        case .fetchSeasonsResponse(.failure):
+            state.viewState = .loaded
             return .none
         case .fetchEpisodes:
+            state.viewState = .loading
             return .run { [seasonID = state.seasonID] send in
                 await send(.fetchEpisodesResponse(TaskResult { try await self.serieDetailsClient.fetchEpisodes(seasonID) }))
             }
             .cancellable(id: CancelID.episodesRequest, cancelInFlight: true)
         case let .fetchEpisodesResponse(.success(response)):
+            state.viewState = .loaded
             state.episodes = IdentifiedArrayOf(uniqueElements: response)
             return .none
-        case let .fetchEpisodesResponse(.failure(error)):
+        case .fetchEpisodesResponse(.failure):
+            state.viewState = .loaded
             return .none
         case .episodeDetailsDispatch:
             return .none

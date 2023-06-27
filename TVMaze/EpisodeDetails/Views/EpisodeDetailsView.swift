@@ -27,7 +27,7 @@ struct EpisodeDetailsView: View {
                             .font(.primary(.small2))
                             .foregroundColor(.white)
                         
-                        Text("Release: \(episode.airdate?.toString(with: .shortDate) ?? "") \(episode.airTime ?? "")")
+                        Text("Release: \(episode.airdate ?? "") \(episode.airTime ?? "")")
                             .font(.primary(.small2))
                             .foregroundColor(.white)
                         
@@ -59,7 +59,7 @@ struct EpisodeDetailsView_Previews: PreviewProvider {
                 name: "Pilot",
                 season: 1,
                 number: 1,
-                airdate: .now,
+                airdate: "2023-06-26",
                 airTime: "22:30",
                 runtime: 60,
                 rating: Rating(average: 3.5),

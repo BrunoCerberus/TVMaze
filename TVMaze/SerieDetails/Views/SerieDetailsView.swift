@@ -39,7 +39,11 @@ struct SerieDetailsView: View {
                                     currentPosition: $pagePosition,
                                     tabType: .scrollable
                                 )
-                                episodesListView
+                                if viewStore.viewState == .loading || viewStore.viewState == .idle {
+                                    skeleton
+                                } else {
+                                    episodesListView
+                                }
                             }
                         }
                         .padding(.top, geo.size.width * Constants.coverHeightRation - 32)
@@ -96,6 +100,17 @@ struct SerieDetailsView: View {
                         .padding(.top, (geometry.size.width * Constants.coverHeightRation) - 60)
                         .padding(.leading, 24)
                 }
+            }
+        }
+    }
+    
+    var skeleton: some View {
+        WithViewStore(store) { viewStore in
+            LazyVStack(spacing: Layout.padding(0)) {
+                ForEach(0..<4) { _ in
+                    EpisodeView(episode: .mock)
+                }
+                .redacted(reason: viewStore.viewState == .loading ? .placeholder : .init())
             }
         }
     }
@@ -163,7 +178,7 @@ struct SerieDetailsView_Previews: PreviewProvider {
                         name: "Pilot",
                         season: 1,
                         number: 1,
-                        airdate: .now,
+                        airdate: "2023-06-26",
                         airTime: "22:30",
                         runtime: 60,
                         rating: Rating(average: 3.5),
@@ -179,7 +194,7 @@ struct SerieDetailsView_Previews: PreviewProvider {
                         name: "Pilot",
                         season: 1,
                         number: 2,
-                        airdate: .now,
+                        airdate: "2023-06-26",
                         airTime: "22:30",
                         runtime: 60,
                         rating: Rating(average: 3.5),

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		151126892A4A60F6002E0E27 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151126882A4A60F6002E0E27 /* ViewState.swift */; };
 		15AC661A2A49FA0F002CB7AC /* EpisodeDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AC66192A49FA0F002CB7AC /* EpisodeDetails.swift */; };
 		15AC661C2A4A08AD002CB7AC /* SearchSeriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AC661B2A4A08AD002CB7AC /* SearchSeriesResponse.swift */; };
 		15AC661E2A4A18B5002CB7AC /* OnFirstAppear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AC661D2A4A18B5002CB7AC /* OnFirstAppear.swift */; };
@@ -77,6 +78,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		151126882A4A60F6002E0E27 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		15AC66192A49FA0F002CB7AC /* EpisodeDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetails.swift; sourceTree = "<group>"; };
 		15AC661B2A4A08AD002CB7AC /* SearchSeriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSeriesResponse.swift; sourceTree = "<group>"; };
 		15AC661D2A4A18B5002CB7AC /* OnFirstAppear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnFirstAppear.swift; sourceTree = "<group>"; };
@@ -328,6 +330,7 @@
 				15C876B92A48FF8C00747BBA /* PageViewModifiers.swift */,
 				15C876C82A4934B400747BBA /* Date+Extensions.swift */,
 				15AC661D2A4A18B5002CB7AC /* OnFirstAppear.swift */,
+				151126882A4A60F6002E0E27 /* ViewState.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -518,6 +521,7 @@
 				15C876B82A48FF4900747BBA /* DesignPageControllerDelegate.swift in Sources */,
 				15C876BE2A4902DA00747BBA /* SeasonsDetailsAPI.swift in Sources */,
 				15C8767A2A47966500747BBA /* FontSize.swift in Sources */,
+				151126892A4A60F6002E0E27 /* ViewState.swift in Sources */,
 				15C876B02A48FE8C00747BBA /* DesignPageController.swift in Sources */,
 				15C876A32A48FD5500747BBA /* FloatingPoint.swift in Sources */,
 				15C876BA2A48FF8C00747BBA /* PageViewModifiers.swift in Sources */,
