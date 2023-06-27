@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>files</key>
+	<dict>
+		<key>Assets.car</key>
+		<data>
+		NM+QWV7Fc7bS/5WtPSH8eUI52ro=
+		</data>
+		<key>Info.plist</key>
+		<data>
+		NDS2d9igGArhuaqSHDvSMhC2RKI=
+		</data>
+		<key>PkgInfo</key>
+		<data>
+		n57qDP4tZfLD1rCS43W0B4LQjzE=
+		</data>
+		<key>TVMaze 26-06-23 22.33.xcarchive/Info.plist</key>
+		<data>
+		i7vNNEYBT0X0DJXlIv8GPrTHHIQ=
+		</data>
+		<key>TVMaze 26-06-23 22.33.xcarchive/Products/Applications/TVMaze.app/Assets.car</key>
+		<data>
+		NM+QWV7Fc7bS/5WtPSH8eUI52ro=
+		</data>
+		<key>TVMaze 26-06-23 22.33.xcarchive/Products/Applications/TVMaze.app/Info.plist</key>
+		<data>
+		NDS2d9igGArhuaqSHDvSMhC2RKI=
+		</data>
+		<key>TVMaze 26-06-23 22.33.xcarchive/Products/Applications/TVMaze.app/PkgInfo</key>
+		<data>
+		n57qDP4tZfLD1rCS43W0B4LQjzE=
+		</data>
+		<key>TVMaze 26-06-23 22.33.xcarchive/Products/Applications/TVMaze.app/TVMaze</key>
+		<data>
+		UYF6H8StqXkDt4c7T3SwHMJMdB0=
+		</data>
+		<key>TVMaze 26-06-23 22.33.xcarchive/Products/Applications/TVMaze.app/_CodeSignature/CodeResources</key>
+		<data>
+		haRBh451bzToeZ9arEGFt5q5+SI=
+		</data>
+		<key>TVMaze 26-06-23 22.33.xcarchive/Products/Applications/TVMaze.app/embedded.mobileprovision</key>
+		<data>
+		C7T9zJ1uO72HaXqOIfUw3kbhRoE=
+		</data>
+		<key>TVMaze 26-06-23 22.33.xcarchive/dSYMs/TVMaze.app.dSYM/Contents/Info.plist</key>
+		<data>
+		450+htM8eJjAeXA6dsx9RZFFl5s=
+		</data>
+		<key>TVMaze 26-06-23 22.33.xcarchive/dSYMs/TVMaze.app.dSYM/Contents/Resources/DWARF/TVMaze</key>
+		<data>
+		Y6rzofxO0L8EexqGaHOcv+kD0Zk=
+		</data>
+		<key>embedded.mobileprovision</key>
+		<data>
+		C7T9zJ1uO72HaXqOIfUw3kbhRoE=
+		</data>
+	</dict>
+	<key>files2</key>
+	<dict>
+		<key>Assets.car</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			YoE1HgWJP4mDEg9uZZ4TXzeP7wW47uGJmruXJAj9Urs=
+			</data>
+		</dict>
+		<key>TVMaze 26-06-23 22.33.xcarchive/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ZgCXWx6++IMTv4ESc980sD50R4OVLpEDANJEspBNqp8=
+			</data>
+		</dict>
+		<key>TVMaze 26-06-23 22.33.xcarchive/Products/Applications/TVMaze.app/Assets.car</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			YoE1HgWJP4mDEg9uZZ4TXzeP7wW47uGJmruXJAj9Urs=
+			</data>
+		</dict>
+		<key>TVMaze 26-06-23 22.33.xcarchive/Products/Applications/TVMaze.app/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			WghFBz+bS0eddzZd1Bga4bBc5jnnutJi3Ec6AQLeL44=
+			</data>
+		</dict>
+		<key>TVMaze 26-06-23 22.33.xcarchive/Products/Applications/TVMaze.app/PkgInfo</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			glAhkclISwTWhTdPmHmgBmBpxJuKyuegSwHTjQfo7KA=
+			</data>
+		</dict>
+		<key>TVMaze 26-06-23 22.33.xcarchive/Products/Applications/TVMaze.app/TVMaze</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			44/K0Jjhb2Va555F25BFKJgl7G87/4GiSTbuODKsCgY=
+			</data>
+		</dict>
+		<key>TVMaze 26-06-23 22.33.xcarchive/Products/Applications/TVMaze.app/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			wtINNnsztLr8PGkDNdkgfRQL9H5H5zSDR3mV0lc0SPE=
+			</data>
+		</dict>
+		<key>TVMaze 26-06-23 22.33.xcarchive/Products/Applications/TVMaze.app/embedded.mobileprovision</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			v+6nP0FPnCb4XxpIh51KhqkfIv0QN2xLtsnGRYBGU5w=
+			</data>
+		</dict>
+		<key>TVMaze 26-06-23 22.33.xcarchive/dSYMs/TVMaze.app.dSYM/Contents/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Lsf6R+jyjbCxOxbdpM/wlf/CJxekNio9zRhTbyazfIk=
+			</data>
+		</dict>
+		<key>TVMaze 26-06-23 22.33.xcarchive/dSYMs/TVMaze.app.dSYM/Contents/Resources/DWARF/TVMaze</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			nvZJhekIKw8NsviPwkDD86F//0T1rjS47RdYsCTTMX4=
+			</data>
+		</dict>
+		<key>embedded.mobileprovision</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			v+6nP0FPnCb4XxpIh51KhqkfIv0QN2xLtsnGRYBGU5w=
+			</data>
+		</dict>
+	</dict>
+	<key>rules</key>
+	<dict>
+		<key>^.*</key>
+		<true/>
+		<key>^.*\.lproj/</key>
+		<dict>
+			<key>optional</key>
+			<true/>
+			<key>weight</key>
+			<real>1000</real>
+		</dict>
+		<key>^.*\.lproj/locversion.plist$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>1100</real>
+		</dict>
+		<key>^Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
+		</dict>
+		<key>^version.plist$</key>
+		<true/>
+	</dict>
+	<key>rules2</key>
+	<dict>
+		<key>.*\.dSYM($|/)</key>
+		<dict>
+			<key>weight</key>
+			<real>11</real>
+		</dict>
+		<key>^(.*/)?\.DS_Store$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>2000</real>
+		</dict>
+		<key>^.*</key>
+		<true/>
+		<key>^.*\.lproj/</key>
+		<dict>
+			<key>optional</key>
+			<true/>
+			<key>weight</key>
+			<real>1000</real>
+		</dict>
+		<key>^.*\.lproj/locversion.plist$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>1100</real>
+		</dict>
+		<key>^Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
+		</dict>
+		<key>^Info\.plist$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>20</real>
+		</dict>
+		<key>^PkgInfo$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>20</real>
+		</dict>
+		<key>^embedded\.provisionprofile$</key>
+		<dict>
+			<key>weight</key>
+			<real>20</real>
+		</dict>
+		<key>^version\.plist$</key>
+		<dict>
+			<key>weight</key>
+			<real>20</real>
+		</dict>
+	</dict>
+</dict>
+</plist>
