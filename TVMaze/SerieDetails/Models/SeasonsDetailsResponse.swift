@@ -30,3 +30,19 @@ struct SeasonsDetails: BaseCodable, Equatable, Identifiable {
         case summary
     }
 }
+
+extension SeasonsDetails {
+    static var mock: Self {
+        Self(
+            id: 1,
+            url: "",
+            number: 2,
+            name: "",
+            episodeOrder: 2,
+            premiereDate: .now,
+            endDate: .now,
+            image: ImageType(medium: "", original: ""),
+            summary: ""
+        )
+    }
+}
